@@ -4,7 +4,7 @@
 	CSS又称之为声明式语言，那我们该如何使用CSS来美化我们的界面呢
 	首先吗，我们先了解一下CSS代码的格式也即是CSS样式代码的格式，也就是下面的这个格式：
 	选择器 {属性:属性值; 属性:属性值; 属性:属性值;}
-	在CSS代码的格式中，选择器是什么呢，选择器就是用来指定你需要改变样式的html标签，然后就是花括号里面的一条声明或者是多条声明，每条声明都是由属性和属性值组成的，并且都是以键值对的形式出现
+	在CSS代码的格式中，选择器是什么呢，选择器就是用来指定你需要改变样式的html标签，然后就是花括号里面的一条声明或者是多条声明，每条声明都是由属性和属性值组成的，并且都是以键值对的形式出现，并且啊还有注意的就是两个键值对之间用分号隔开
 	那属性和属性值是什么呢，首先是属性，在CSS中属性就是用来表示你要修改的具体样式的名称，而属性值的话就是你要修改这个属性的具体的样式值,在CSS中就是通过属性和属性值来修改网页中元素的样式的
 	之后呢就是要学习在HTML中该如何引入CSS代码，要想引入CSS的话总共有三种方法，分别是一下三种方法
 	第一种方法就是通过HTML的标签中style属性来引入CSS，格式是这样的：<p style = "color: red">演示文本</p>
@@ -48,17 +48,17 @@
 	
 	学习完选择器之后呢，我们就可以我们选择的html元素进行设置样式了，样式的话是通过属性来设置的，那再CSS中有哪些常用的属性呢
 	
-	color 属性，这个属性的作用就是可以给文本设置颜色
-	font-size 属性，这个属性的作用就是可以给文本设置字体大小
-	text-align 属性，这个属性的话就是可以给文本设置对齐模式总共有三种对齐模式，第一种：居中对齐(center)，左对齐(lift)，右对齐(right)
-	border 属性，这个属性的作用就是可以给区块元素和行内元素设置边框，例如这样：border: 1px white solid 那这些是代表的是什么呢，首先是1px代表设置边框的像素为1像素，white代表设置边框的颜色为白色，solid代表的是设置边框线条的样式，solid为一般直线样式当然啊，还有其他样式，这里就不写了
-	border-radius属性，这个属性就是可以给边框设置圆角
-	background-image属性这个是什么属性呢，其实这个属性的话就是可以给html元素设置一个背景图片，并使用url这个属性来设置图片的路径，例如这样：background-image: url(./img/bj.png);
-	padding属性，那这个什么属性呢，这个属性就是可以给html元素设置内边距，那澳门是内边距呢，内边距就是这个html元素里的内容和html元素之间的空隙，这就是内边距
-	margin属性，那这个又是什么属性呢，这个属性就是可以给html元素设置外边距，那什么是外边距，外边距就是这个html元素和其他html元素之间的空隙，这就是外边距
-	backdrop-filter属性，那这个是什么属性呢，这个属性的话就是可以给元素设置滤镜的就比如说可以给这个元素设置这个模糊那就用这个函数来实现，格式是这样的：backdrop-filter: blur(10px) ，那这个是什么blur，这个其实就是CSS中的用于设置模糊效果的半径的函数，但是在CSS中的函数并不像编程语言中的函数，因为啊在CSS中的函数这是用来描述这个数是什么的，而编程语言中的函数就是一个代码块并且啊这个代码块是可以重复调用的
-	background-repeat属性，这个属性的话就是就要给这个背景设置重复方式，他总共又三种重复方式，第一种：不重复(no-repeat)，第二种：水平重复(repeat-x)，第三种：垂直重复(repeat-y)
-	background-size属性，那这个又是什么属性呢，这个属性就是用来设置这个背景图片的大小的，他总共有四种设置图片大小的方式，第一种：保持默认的图片大小(auto)，第二种方式也就是通过设置图片的宽度和高度来实现的，例如这样：backgound-size:100px 200px，第三种：也就是couver的方式，那这个是什么方式呢，这个方式的话就是将这个背景图片填满这个元素，第四种：那就是通过这个方式来contain设置图片的大小的，这个方式的话就是完整的显示背景图片，并且他是不会改变图片的比例的
+	color属性，这个属性的作用就是给文本设置一个颜色
+	font-size属性，这个属性的作用就是给文本设置字体的大小
+	text-alian属性，这个属性的作用就是设置这个文本的对齐方式，并且啊这个文本总共有三种对齐方式，居中对齐(center)，左对齐(left)，右对齐(right)
+	border属性，这个属性的作用就是给html元素设置一个边框，格式是这样的：border: 1px white solid;，那这个1px这个值是什么意思呢，就是代表的你要设置的这个边框的宽度单位是像素，white的值代表的是你要设置的边框的颜色，solid这个值代表的是你要设置边框线条的样式，例如solid就代表的就是这个边框的线条的样式是一般的直线样式
+	border-radius属性，这个属性的作用就是给这个边框设置圆角
+	padding属性，这个属性的作用就是给这个html元素设置一个内边距，那什么是内边距呢，内边距就是html元素中的内容和这个html元素的距离，这就是内边距
+	margin属性，这个属性的所有就是给这个html元素设置一个外边距，那什么是外边距呢，外边距就是这个html元素和其他html元素之间的距离，这就是外边距
+	background-image属性，这个属性的作用就是给这个html元素设置一个背景图片，格式是这样的：background-image: url("./mm.png")，那url是什么东西呢，url其实是CSS中的函数，但是呢再CSS中的函数不同于我们编程中的函数，这个函数的作用就是来代表这个值是一个什么样的值，也就是说再CSS中的函数只起到的是一个声明的作用，而url代表的就是这个值是一个路径
+	background-filter属性，这个属性的作用就是给这个html元素增加一个滤镜，那有哪些常用的滤镜呢，就比如说blur这个滤镜这个滤镜的话主要的作用就是给背景添加一个模糊的效果
+	background-repeat属性，这个属性的作用就是给html元素设置背景的重复方式，就比如说no-repeat这个重复方式，no-repeat值就是代表的就是重复方式为不重复
+	background-size属性，这个属性的作用就是设置背景的大小
 -->
 <!DOCTYPE html>
 <html>
@@ -67,36 +67,31 @@
 		<title>自我介绍</title>
 		<style>
 			body{
-				background-image: url(./img/bj.png); /* 给body标签设置一个背景图片 */
-				background-repeat: no-repeat;		 /* 给body标签设置背景图片的重复方式 */
-				background-size: 3840px 2160px;		 /* 给body标签设置背景图片的大小 */
+				background-image: url("img/bj.png");
+				background-repeat: no-repeat;
+				background-size: 3840px 2160px;
+			}
+			.name{
+				background-color: rgba(255,255,255,0.1);
+				margin: 420px 50px;
+				backdrop-filter: blur(10px);
+				border-radius: 10px;
+				padding: 10px 20px;
 			}
 			h1{
-				color: white; 		/* 设置h1标签的文本的颜色   */
-				font-size: 40px;    /* 设置h1标签的文本字体大小 */
-				/* text-align: center; // 设置hi标签的对齐方式  */
+				color: white;
+				text-align: center;
 			}
 			ul{
-				color: white; 		/* 设置ul无序列表标签的文本的颜色 */
+				color: white;
 			}
-			h1,ul{
-				text-align: center; /* 设置h1,ul标签的对齐方式 */
-			}
-			div ul{
-				text-align: left; /* 设置ul标签的对齐方式 */
-			}
-			#name{
-				border: 1px white solid; 		     	     /* 给name这个id的元素设置一个边框 */
-				padding: 15px;           					 /* 给name这个id元素设置一个内边距 */
-				margin: 200px 20px 20px;            		 /* 给name这个id元素设置一个外边距 */
-				border-radius: 10px;                		 /* 给name这个id元素设置一个边框的圆角*/
-				background-color: rgba(255, 255, 255, 0.1);  /* 给name这个id元素设置一个背景颜色*/
-				backdrop-filter: blur(20px);				 /* 给name这个id元素设置一个背景模糊效果*/
+			li{
+				font-size: 13px;
 			}
 		</style>
 	</head>
 	<body>
-		<div id = "name">
+		<div class = "name">
 		<h1><strong>自 我 介 绍</strong></h1>
 		<ul>
 			<li>姓名：XXX</li>
