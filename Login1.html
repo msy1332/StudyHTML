@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				height: 100%;
+				width: 100%;
+			}
+			body{
+				background-image: url("https://t.alcy.cc/pc");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			ul{
+				width: 300px;
+			}
+			h1{
+				color: rgb(143, 205, 67);
+				font-size: 25px;
+				margin-bottom: 8px;
+			}
+			#Lonin{
+				width: 380px;
+				height: 280px;
+				padding: 10px 25px;
+				background-color: rgba(255,255,255,0.5);
+				border-radius: 10px;
+				/* display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center; */
+			
+			#form{
+				width: 70%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#form .input{
+				height: 25px;
+				border-radius:6px;
+				background-color: rgba(255,255,255,0.5);
+				padding: 0 1em;
+				border: 1px rgb(205, 205, 205) solid;
+			}
+			#form .input[placeholder]{
+				font-size: 10px;
+			}
+			#form button{
+				height: 40px;
+				width: 200px;
+				border: 0;
+				border-radius: 4px;
+				background-color: rgb(143, 205, 67);
+				color: white
+			}
+			#form button:active{
+				background-color: rgba(143, 205, 67,0.9);
+				border: 0;
+			}
+			#form button:hover{
+				border: 0;
+			}
+			li{
+				font-family: '宋体'; 
+				margin: 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="Lonin">
+			<div id="image">
+				
+			</div>
+			<div id="form">
+				<h1>用户注册</h1>
+				<ul type="none">
+					<li>用户名称 <input class = "input" type="text" placeholder="限字母、数字和下划线"/></li>
+					<li>登录密码 <input class = "input" type="password" placeholder="6到16个字符，区分大小写"/></li>
+					<li>确认密码 <input class = "input" type="password" /></li>
+					<li>手机号码 <input class = "input" type="number" /></li>
+					<li>电子邮箱 <input class = "input" type="email" /></li>
+				</ul>
+				<button type="button">同意以下协议,提交</button>
+			</div>
+		</div>
+	</body>
+</html>

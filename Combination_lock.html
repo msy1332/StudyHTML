@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>密码锁</title>
+		<style>
+		/* 初始化网页 */
+		*{
+			padding: 0px 0px;
+			margin:  0px 0px;
+		}
+		
+		body,html{
+			width: 100%;  /* 设置元素的宽度 */
+			height: 100%; /* 设置元素的高度 */
+		}
+		
+		body{
+			background-image: url("https://t.alcy.cc/pc"); /* 设置元素的背景图片 */
+			background-repeat: no-repeat; /* 设置背景图片的重复方式 */
+			background-size: cover; /* 设置背景图片的大小 */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.Combination_lock_Box{
+			width: 400px;
+			height: 500px;
+			background-color: rgba(255,255,255,0.3);
+			border: 1px rgba(255,255,255,0.2) solid;
+			border-radius: 10px;
+			padding: 25px 25px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			box-shadow: -5px 5px 10px rgba(0,0,0,0.3);
+		}
+		
+		input{
+			width:60px;
+			height: 60px;
+			border-radius: 10px;
+			border: 0px;
+			background-color: rgba(255,255,255,0.6);
+			margin: 0px 10px; 
+			font-size: 20px;
+			text-align: center;
+		}
+		
+		.none_Box{
+			width: 100%;
+			height: 50px;
+		}
+		button{
+			width: 60px;
+			height: 60px;
+			border-radius: 10px;
+			border: 0px;
+			margin: 15px 15px;
+			background-color: rgba(255,255,255,0.5);
+		}
+		
+		h1{
+			color: white;
+			font-family: '楷体';
+			font-size: 30px;
+			margin: 20px 0px;
+		}
+/* 		#ID_0{
+			margin-left: 110px;
+		} */
+		
+		button:hover{
+			background-color: rgba(255,255,255,0.2);
+		}
+		
+		button:active{
+			background-color: rgba(255,255,255,0.5);
+		}
+		</style>
+	</head>
+	<body>
+		<div class = "Combination_lock_Box">
+			<h1>请输入密码</h1>
+			<div>
+				<input type="text" readonly = "readonly" maxlength="1" id = "Text_1"/>
+				<input type="text" readonly = "readonly" maxlength="1" id = "Text_2"/>
+				<input type="text" readonly = "readonly" maxlength="1" id = "Text_3"/>
+				<input type="text" readonly = "readonly" maxlength="1" id = "Text_4"/>
+			</div>
+			<div class = "none_Box">
+			</div>
+			<div>
+				<button id = "ID_1">1</button>
+				<button id = "ID_2">2</button>
+				<button id = "ID_3">3</button>
+				<br/>
+				<button id = "ID_4">4</button>
+				<button id = "ID_5">5</button>
+				<button id = "ID_6">6</button>
+				<br/>
+				<button id = "ID_7">7</button>
+				<button id = "ID_8">8</button>
+				<button id = "ID_9">9</button>
+				<br/>
+				<button id = "Confirm">确认</button>
+				<button id = "ID_0">0</button>
+				<button id = "Clear"><</button>
+			</div>
+		</div>
+		<script>
+			let Text_1 = document.getElementById("Text_1");
+			let Text_2 = document.getElementById("Text_2");
+			let Text_3 = document.getElementById("Text_3");
+			let Text_4 = document.getElementById("Text_4");
+			
+			document.getElementById("ID_1").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "1";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "1";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "1";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "1";
+				}
+			};
+			
+			document.getElementById("ID_2").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "2";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "2";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "2";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "2";
+				}
+			};
+			
+			document.getElementById("ID_3").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "3";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "3";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "3";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "3";
+				}
+			};
+			
+			document.getElementById("ID_4").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "4";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "4";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "4";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "4";
+				}
+			};
+			
+			document.getElementById("ID_5").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "5";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "5";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "5";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "5";
+				}
+			};
+			
+			document.getElementById("ID_6").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "6";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "6";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "6";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "6";
+				}
+			};
+			
+			document.getElementById("ID_7").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "7";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "7";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "7";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "7";
+				}
+			};
+			
+			document.getElementById("ID_8").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "8";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "8";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "8";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "8";
+				}
+			};
+			
+			document.getElementById("ID_9").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "9";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "9";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "9";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "9";
+				}
+			};
+			
+			document.getElementById("ID_0").onclick = function(){
+				if(Text_1.value == "")
+				{
+					Text_1.value = "0";
+				}
+				else if(Text_2.value == "")
+				{
+					Text_2.value = "0";
+				}
+				else if(Text_3.value == "")
+				{
+					Text_3.value = "0";
+				}
+				else if(Text_4.value == "")
+				{
+					Text_4.value = "0";
+				}
+			};
+			
+			document.getElementById("Clear").onclick = function(){
+				if(Text_4.value != "")
+				{
+					Text_4.value = "";
+				}
+				else if(Text_3.value != "")
+				{
+					Text_3.value = "";
+				}
+				else if(Text_2.value != "")
+				{
+					Text_2.value = "";
+				}
+				else if(Text_1.value != "")
+				{
+					Text_1.value = "";
+				}
+			};
+			
+			document.getElementById("Confirm").onclick = function(){
+				if(Text_1.value == "1" && Text_2.value == "2" && Text_3.value == "3" && Text_4.value == "4")
+				{
+					alert("密码正确");
+				}
+				else
+				{
+					alert("密码错误");
+				}
+			};
+		</script> 
+	</body>
+</html>

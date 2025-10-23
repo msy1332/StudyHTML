@@ -1,0 +1,119 @@
+<!-- 声明文档的类型为html -->
+<!DOCTYPE html>
+
+<!-- 根标签 -->
+<html>
+	<!-- 头部标签 -->
+	<head>
+		<meta charset = "utf-8"/>
+		<title>登录</title>
+		<style>
+			/* 初始化网页 */
+			*{
+				/* 因为浏览器他有默认的内边距和外边距,所有这个才要初始化 */
+				padding: 0px 0px;
+				margin:  0px 0px;
+			}
+			
+			body,html{
+				width:  100%; /* 设置元素的宽度 */
+				height: 100%; /* 设置元素的高度 */
+			}
+			
+			body{
+				/* background-image: linear-gradient(to right ,rgb(255, 184, 239),rgb(255, 178, 232),rgb(255, 165, 213)); /* 设置元素的背景为渐变色 */
+				background-image: url("https://t.alcy.cc/pc"); /* 设置元素的背景图片 */
+				background-repeat: no-repeat; /* 设置背景的重复方式 */
+				background-size: cover; /* 设置背景大小 */
+				display: flex; /* 设置这个盒子内部元素的的布局方式 */
+				/* flex-direction: column; */
+				justify-content: center; /* 设置元素在主轴方向上的排列方式 */
+				align-items: center; /* 设置元素在交叉轴方向上的排列方式 */
+			}
+			
+			.LoninBox{
+				width: 250px; /* 设置盒子的宽度 */
+				height: 150px; /* 设置盒子的高度 */
+				padding: 30px 50px; /* 设置登录盒子的内边距 */
+				background-color: rgba(255,255,255,0.2); /* 设置登录盒子背景颜色 */
+				border: 1px rgba(255,255,255,0.6) solid;
+				border-radius: 15px; /* 设置圆角 */
+				display: flex; /* 设置盒子内部的布局方式 */
+				flex-direction: column; /* 设置主轴的方向 */
+				justify-content: center; /* 设置元素在主轴方向上的排列方式 */
+				box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
+			}
+			h1{
+				text-align: center; /* 设置文本的对齐方式 */
+				font-size: 25px; /* 设置文本的大小 */
+				margin: 5px 0px; /* 设置外边距 */
+			}
+			button{
+				width: 80px; /* 设置按钮的宽度 */
+				height: 30px; /* 设置按钮的高度 */
+				border: 0px; /* 设置按钮的边框 */
+				border-radius: 10px; /* 设置按钮的边框的圆角 */
+				background-color: rgba(255,255,255,0.5); /* 设置按钮的背景颜色 */
+				/* margin: 10px auto; */
+				margin: 10px auto; /* 设置按钮的外边距 */
+			}
+			/* 设置按钮在未访问时的状态的样式 */
+			button:link{
+				background-color: rgba(255,255,255,0.5);
+			}
+			/* 设置按钮在被访问过时的状态的样式 */
+			button:visited{
+				background-color: rgba(255,255,255,0.5);
+			}
+			/* 设置鼠标悬浮在按钮上的时候的状态的样式 */
+			button:hover{
+				background-color: rgba(255,255,255,0.3);
+			}
+			/* 设置按钮按钮在被点击时的状态的样式 */
+			button:active{
+				background-color: rgba(255,255,255,0.5);
+			}
+			
+			input{
+				height: 23px; /* 设置元素的高度 */
+				border-radius: 5px; /* 设置圆角 */
+				border: 0px; /* 设置边框 */
+				background-color: rgba(255,255,255,0.4); /* 设置背景颜色 */
+			}
+			input::placeholder{ /* 设置input标签中的placeholder属性的样式 */
+				font-size: 11px;
+			}
+		</style>
+	</head>
+	<!-- 主体标签 -->
+	<body>
+		<div class = "LoninBox">
+			<h1>登录</h1>
+			<table>
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" placeholder="请输入用户名" id = "_user"/></td>
+				</tr>
+				<tr>
+					<td>密 码：</td>
+					<td><input type="password" placeholder="请输入密码" id = "_password"/></td>
+				</tr>
+			</table>
+			<button id = "btn">登录</button>
+		</div>
+		<script>
+			document.getElementById("btn").onclick = function(){
+				let name = document.getElementById("_user").value;
+				let password = document.getElementById("_password").value;
+				if(name == "root" && password == "123455")
+				{
+					alert("登录成功");
+				}
+				else
+				{
+					alert("登录失败");
+				}
+			};
+		</script>
+	</body>
+</html>
