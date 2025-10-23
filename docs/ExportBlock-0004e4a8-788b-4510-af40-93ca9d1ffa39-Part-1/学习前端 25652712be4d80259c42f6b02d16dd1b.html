@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>学习前端</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="25652712-be4d-8025-9c42-f6b02d16dd1b" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1628763228722-b11a9c545ed7?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon notion-static-icon" src="https://www.notion.so/icons/code_purple.svg"/></div><h1 class="page-title">学习前端</h1><p class="page-description"></p></header><div class="page-body"><ul id="25c52712-be4d-8061-b84b-c04e9e17e343" class="toggle"><li><details open=""><summary><strong> 什么是前端？</strong></summary><p id="29252712-be4d-8082-bcd2-da675a24a0a3" class=""><strong>说到前端我们就要先了解网页开发的三剑客，那是哪三剑客呢，其实啊也就是HTML，CSS，JavaScrip，那什么是HTML，CSS和JavaScrip呢</strong></p><ul id="29252712-be4d-8043-81ad-ee09049555f0" class="toggle"><li><details open=""><summary><strong>什么是HTML</strong></summary><ul id="29252712-be4d-800a-8bdc-e5a6191d5f6d" class="bulleted-list"><li style="list-style-type:disc">其实啊HTML是一种超文本标记语言，并且啊他是现在万维网的基础</li></ul><ul id="29252712-be4d-805e-99ed-fc54c803842f" class="bulleted-list"><li style="list-style-type:disc">HTML他是通过标签来描述网页中的内容的</li></ul></details></li></ul><ul id="29252712-be4d-8080-b194-f62b145be97e" class="toggle"><li><details open=""><summary><strong>什么是CSS</strong></summary><p id="29252712-be4d-80bf-bc52-e58769e32605" class="">其实啊这个也很简单，其实啊CSS就是一种声明式语言，但是啊这里要注意的就是他不是编程语言，因为他没有逻辑，并且啊CSS他的主要的作用就是用来美化我们的网页的</p></details></li></ul><ul id="29252712-be4d-802d-8a60-fa82cf24e22b" class="toggle"><li><details open=""><summary><strong>什么是Javascript</strong></summary></details></li></ul><p id="29252712-be4d-807a-b944-f97dec8dbbe8" class="">并且啊理解前端这个概念的话其实也很简单，其实啊前端就是我们用户能看见的界面，就是用前端的代码来写的，也就是用前端三剑客来写的，了解完前端这个概念之后呢，我们就可以正式的开始学习前端了</p></details></li></ul><ul id="29252712-be4d-80b3-8b8d-c7e99d110c04" class="toggle"><li><details open=""><summary><strong>首先的话先学习HTML语言</strong></summary><ul id="29252712-be4d-80a3-9e95-cea090b2f755" class="bulleted-list"><li style="list-style-type:disc">在学习HTML之前我们必须要先了解三个概念之后呢才能开始学，那是哪三个概念呢，其实啊也就是标签，元素，属性<ul id="29252712-be4d-8070-ac6e-f63f651b3277" class="toggle"><li><details open=""><summary>什么是标签？</summary><ul id="29252712-be4d-8047-a037-c094d132641a" class="bulleted-list"><li style="list-style-type:disc">其实啊标签这个概念也很简单，标签其实就是在HTML中最基础的东西，并且啊在HTML中标签的主要的作用就是告诉浏览器，这个标签中的内容是什么意思，也就是告诉浏览器用什么方式来解析里面的内容</li></ul></details></li></ul><ul id="29252712-be4d-806c-987a-fc6bc1a8e582" class="toggle"><li><details open=""><summary>什么是元素？</summary><ul id="29252712-be4d-8099-a6bc-f0e6a844b08f" class="bulleted-list"><li style="list-style-type:disc">元素其实就是开始标签到结束标签的这个整体就称之为元素</li></ul></details></li></ul><ul id="29252712-be4d-80c7-9695-e195dadf7cf4" class="toggle"><li><details open=""><summary>什么是属性？</summary><ul id="29252712-be4d-8068-9096-f4f5958f02b5" class="bulleted-list"><li style="list-style-type:disc">其实啊属性就是这个标签的额外信息，并且啊属性他是不会显示出来的，他只会影响这个标签的最终显示出来的效果</li></ul></details></li></ul></li></ul><ul id="29252712-be4d-804a-b65c-e9064a4379de" class="bulleted-list"><li style="list-style-type:disc">之后呢了解完这些HTML的基础概念我们就可以正式的开始学习HTML语言了，首先我们先学习一下HTML网页的基本结构，如下</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29252712-be4d-8041-8db3-d1d8af2b3b87" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset = &quot;utf-8&quot;/&gt;
+		&lt;title&gt;&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;!-- 演示 --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre><ul id="29252712-be4d-800a-871b-c2a2c075dd61" class="bulleted-list"><li style="list-style-type:disc">如上就这个网页的基本结构<ul id="29252712-be4d-80a5-aa06-e84404a7eb5e" class="bulleted-list"><li style="list-style-type:circle">首先是&lt;!DOCTYPE html&gt;这句代码是什么意思呢，其实啊这句代码的意思就是声明这个文档的类型为html</li></ul><ul id="29252712-be4d-8069-8692-e120737db953" class="bulleted-list"><li style="list-style-type:circle">然后就是&lt;html&gt;&lt;/html&gt;这个标签，我们可以看到这个标签他是一个双标签，也就是说如果一个标签他有结束标签的话，那么这个标签就是双标签，否则就是单标签，然后就是这个html标签，这个标签他是这个网页的根标签，也就是说除了&lt;!DOCTYPE html&gt;这个，其他的标签都要写在这个根标签的内部</li></ul><ul id="29252712-be4d-80cb-be4e-e88021c89961" class="bulleted-list"><li style="list-style-type:circle">然后的话就是head这个标签，这个标签的话他是头部标签，并且啊头部标签有一个特点就是写在头部里面的标签是不会显示在网页中的</li></ul><ul id="29252712-be4d-8034-846d-d9ec8f35532b" class="bulleted-list"><li style="list-style-type:circle">然后就是这个标签，也就是meta这个标签，这个标签的主要的作用就是设置这个网页的一些元信息，然后就是这个标签的charset这个属性，这个属性的话他的主要的作用就是用来设置浏览器是以什么样的编码来解析这个文件的</li></ul><ul id="29252712-be4d-8008-9a3e-d1ea5b6ab86c" class="bulleted-list"><li style="list-style-type:circle">然后的话就是这个标签，也就是title这个标签，这个标签的话他的主要的作用就是设置这个网页的头部标签的，也就是在标签页上显示的标题</li></ul><ul id="29252712-be4d-8038-8666-df36315a2851" class="bulleted-list"><li style="list-style-type:circle">然后就是这个标签，也就是body，那这个是什么标签呢，其实啊这个标签就是这个网页的主体标签，并且这个标签啊他还有一个特点，也就是写在他内部的标签他都会显示出来，这就是head标签和body标签之间重要的区别</li></ul><ul id="29252712-be4d-80c8-ae59-e85745e64b85" class="bulleted-list"><li style="list-style-type:circle">然后的话就是这个标签，也就是&lt;!-- 演示  --&gt;那这个是什么呢，其实啊这个就是在html语言中的注释</li></ul></li></ul><ul id="29252712-be4d-806a-8f25-f9ad478ad415" class="bulleted-list"><li style="list-style-type:disc">这就是在html网页中的基本结构了</li></ul><ul id="29252712-be4d-8029-888f-f1e396011b69" class="bulleted-list"><li style="list-style-type:disc">我们了解完了html网页的基本结构了之后呢，我们就可以开始学习在html中各种各样的标签了<ul id="29252712-be4d-807b-8f67-c2cebbc9c673" class="bulleted-list"><li style="list-style-type:circle">&lt;html&gt;&lt;/html&gt; 那这个是什么标签呢，其实啊这个标签是一个根标签，并且啊除了&lt;!DOCTYPE html&gt;这个其他的标签都必须要写到这个标签的里面</li></ul><ul id="29252712-be4d-800d-8c3a-d04af752eda6" class="bulleted-list"><li style="list-style-type:circle">&lt;meta/&gt; 那这个是什么标签呢，其实啊这个标签的作用就是用来这个网页的一些元信息的，就比如说设置这个网页解析的方式，也就是设置这个网页的编码，这个的话就是通过这个标签的charset这个属性来设置的</li></ul><ul id="29252712-be4d-80ca-a597-fde86db83462" class="bulleted-list"><li style="list-style-type:circle">&lt;title&gt;&lt;/title&gt; 那这个是什么标签呢，其实啊这个标签是一个用来给网页设置头部标题的标签</li></ul><ul id="29252712-be4d-8055-bf60-e613f0cbd1e1" class="bulleted-list"><li style="list-style-type:circle">&lt;head&gt;&lt;/head&gt; 那这个是什么标签呢，其实啊这个标签是头部标签，并且啊在头部标签里面写的标签都不会显示出来</li></ul><ul id="29252712-be4d-80fa-9f41-c7f0c79ced91" class="bulleted-list"><li style="list-style-type:circle">&lt;body&gt;&lt;/body&gt; 那这个是什么标签呢，其实啊这个标签是主体标签，并且啊写到主体标签里面的标签都会被显示出来</li></ul><ul id="29252712-be4d-80ff-bcaf-fd04a4e6cff3" class="bulleted-list"><li style="list-style-type:circle">&lt;hn&gt;&lt;/hn&gt;(m的范围在：1-6) 那这个是什么标签呢，其实啊这个标签是标题标签，并且啊标签等级是1的标题标题标签的文本是最大的，而标签等级是6的标题标签的文本是最小的</li></ul><ul id="29352712-be4d-8094-9a04-cc379b820af9" class="bulleted-list"><li style="list-style-type:circle">&lt;p&gt;&lt;/p&gt; 那这个是什么标签呢，其实啊这个标签是段落标签</li></ul><ul id="29352712-be4d-8049-ab98-c5a91d678653" class="bulleted-list"><li style="list-style-type:circle">&lt;br/&gt;那这个是什么标签呢，其实啊这个标签是换行标签，这个标签的话他的主要的作用就是给其他标签或者是文本换行</li></ul><ul id="29352712-be4d-80bc-bd0b-ee6aaaeadb20" class="bulleted-list"><li style="list-style-type:circle">&lt;hr/&gt; 那这个是什么标签呢，其实啊这个标签是分割线标签，这个标签的话他的主要的作用就是会创建一个分割线</li></ul><ul id="29352712-be4d-8013-b9dc-c38e1c6ac9dd" class="bulleted-list"><li style="list-style-type:circle">&lt;a&gt;&lt;/a&gt; 那这个是什么标签呢，其实啊这个标签是一个超链接标签，这个标签的话他的主要的作用就是，只要是写到这个标签里面的其他标签，只要是点击到写到超链接里面的标签的话他就会跳转我们通过href这个属性设置的网站或者是网页，这个标签的格式是这样的：&lt;a href = “” target = “”&gt;&lt;/a&gt;，注意我们已经知道了href属性是用来设置跳转的网页或者是网站的地址的并且啊他也可以链接其他资源但是呢如果一些资源无法展示出来的话他就会一下载的方式来给用户进行展示，并且啊这个标签的话他还有一个的作用就是他可以跳转锚点，也就是这样：&lt;a href = “#t”&gt;&lt;/a&gt;，并且啊必须要在你创建的这个锚点的名字前面加上井号，那如何创建锚点呢，创建锚点的话其实也很简单，也就是通过其他的标签的id这个属性就可以来进行创建锚点了</li></ul><ul id="29352712-be4d-808b-9eb7-d46de8a6ade6" class="bulleted-list"><li style="list-style-type:circle">&lt;img src = “” alt = “” width = “” height = “”/&gt; 那这个是什么标签呢，其实啊这个标签是图片标签，这个标签的话他的主要的作用向网页中插入标签的，我们可以看到这个标签的话他又很多属性，首先是第一个属性，也就是src这个属性，这个属性的话他的主要的作用就是设置这个图片的路径的，然后就是alt这个属性，这个属性的话他的主要的作用就是当这个图片资源加载失败的时候就会显示这个文本来提示用户的，然后就是width这个属性，这个属性的话他的作用就是设置这个图片的宽度的，并且啊如果没有设置这个图片的高度的话他就会跟随的宽度进行自适应，也就是他会根据设置的宽度等比例的缩放高度，height这个属性也是一样的道理</li></ul><ul id="29352712-be4d-801c-99e6-e036a37e1758" class="bulleted-list"><li style="list-style-type:circle">&lt;em&gt;&lt;/em&gt; 那这个是什么标签呢，其实啊这个标签的作用就是用于给文本添加斜体效果的</li></ul><ul id="29352712-be4d-80fe-801e-effebdd9bc5b" class="bulleted-list"><li style="list-style-type:circle">&lt;strong&gt;&lt;/strong&gt; 那这个是什么标签呢，其实啊这个标签的作用就是用于给文本添加粗体效果的</li></ul><ul id="29352712-be4d-80ac-8cf0-ea472881ac6a" class="bulleted-list"><li style="list-style-type:circle">&lt;ol&gt; &lt;li&gt; &lt;/li&gt; &lt;/ol&gt; 那这个是什么标签呢，其实啊这个标签是有序列表标签，其中啊&lt;li&gt;&lt;/li&gt;这个标签啊的作用就是向这个有序列表中添加内容的</li></ul><ul id="29352712-be4d-8087-8c82-f6fc90ad2be5" class="bulleted-list"><li style="list-style-type:circle">&lt;ul type = “”&gt; &lt;li&gt; &lt;/li&gt; &lt;/ul&gt; 那这个是什么标签呢，其实啊这个标签是跟那个有序列表标签是差不多的，只不过列表的前面是项目符号，然后就是type这个属性，那这个是什么属性呢，其实啊这个属性就是用来设置这个列表前面的项目符号的样式的，那这个属性有多少种属性值呢，首先是第一种属性值，也就是square，设置了这个属性值之后呢列表前面的项目符号就会变成一个实心的方块，然后就是第二中属性值，也就是circle，设置了这个属性值之后呢前面的项目符号就会变成一个空心的圆点，然后就是第三种属性值，也就是disc，设置了这个属性值之后呢前面的项目符号就变成一个实心的圆点，并且啊默认也是这个，然后就是第四种属性值，也就是none，设置了这个属性值之后呢列表前面就没有这个项目符号了</li></ul><ul id="29352712-be4d-8071-9075-db66543c3777" class="bulleted-list"><li style="list-style-type:circle">&lt;table width = “” height = “” align = “” bgcolor = ““ cellpadding = “” &gt;&lt;/table&gt; 那这个是什么标签呢，其实啊这个标签是表格标签，这个标签的主要的作用就是创建一个表格，然后就是这个表格标签的一些属性，首先是第一个属性，也就是width这个属性，这个属性的话他的主要的作用就是设置这个表格的宽度，然后就是第二个属性，也就是height这个属性，这个属性的话他的主要的作用就是设置这个表格的高度的，然后就是第三个属性，也就是bgcolor这个属性，这个属性的话他的主要的作用就是设置这个表格的背景颜色的，然后就是第四个属性，也就是cellspacing这个属性，这个属性的话他的主要的作用就是设置这个单元格和单元格之间的间距的，然后就是第五个属性，也就是cellpadding这个属性，这个属性的话他的主要的作用就是设置这个单元格里面的内容和单元格之间的间距的</li></ul><ul id="29352712-be4d-8069-b3c2-db0fc644fbd5" class="bulleted-list"><li style="list-style-type:circle">&lt;tr  height = “” bgcolor = “” align = “” valign = “”&gt;&lt;/tr&gt; 那这个是什么标签呢，其实啊这个标签的话他的主要的作用就是向表格中添加单元行的，并且啊这个并且啊这个标签必须要配合这个表格标签一起使用，然后的话就是这个标签的一些属性，因为啊前面的两个属性我们都已经了解过了，所以我就从第三个属性开始，也就是align这个属性，这个属性的话他的作用就是设置这个单元行中的单元格中的内容夫人对齐方式的而第四个属性他是设置在垂直方向上的对齐方式的</li></ul><ul id="29352712-be4d-80b0-be09-e79b0054d714" class="bulleted-list"><li style="list-style-type:circle">&lt;td width = “” height = “” bgcolor = “” align = “” rowspan = “” colsspan = “”&gt;&lt;/td&gt; 那这个是什么标签呢，其实啊这个标签的话他的作用就是向这个单元行中添加单元格的，然后就是这个标签的一些属性，因为前面的4个属性的话我们都已经了解过了，所以我们就从第五个属性开始，也就是rowspan这个属性，这个属性的话他的主要的作用就是向下创建一个单元格并合并而第六个属性的话他是向左创建一个单元格并合并</li></ul><ul id="29352712-be4d-80f9-8b8a-caca14e555b9" class="bulleted-list"><li style="list-style-type:circle">&lt;th width = “” height = “” bgcolor = “” align = “” rowspan = “” colsspan = “”&gt;&lt;/th&gt; 那这个是什么标签呢，其实啊这个标签和这个&lt;tr&gt;&lt;/tr&gt;是一模一样的，只不过写到这个标签里面的文本会被自动加粗</li></ul><ul id="29352712-be4d-8043-9a33-cdad4b0c8924" class="bulleted-list"><li style="list-style-type:circle">&lt;textarea row = “” cols = “”&gt;&lt;/textarea&gt; 那这个是什么标签呢，其实啊这个标签是多行文本输入框标签，然后就是这个标签的一些属性，首先是第一个属性，也就是row这个属性，这个属性的作用就是设置这个多行文本输入框显示的行而第二个属性是设置显示的列的</li></ul><ul id="29352712-be4d-801c-8440-f4a0aa2ed2c8" class="bulleted-list"><li style="list-style-type:circle">&lt;button&gt;&lt;/button&gt; 那这个是什么标签呢，其实啊这个标签是按钮标签，这个标签的话他的主要的作用就是创建一个按钮就</li></ul><ul id="29352712-be4d-8041-ba86-c7d6e4be8298" class="bulleted-list"><li style="list-style-type:circle">&lt;input type = “” value = “”  size = “” readonly = “” maxlenght = “” placeholder = “”/&gt; 那这个是什么标签呢，其实啊这个标签是表单标签，然后就是这个标签的一些属性，首先是第一个属性，也就是type这个属性，这个属性的话他的主要的作用就是设置这个表单的类型的，那有多少种表单类型呢，如下图<figure id="29352712-be4d-80e7-abbe-f09e8cea04f8" class="image"><a href="image.png"><img style="width:514.984375px" src="image.png"/></a></figure><p id="29352712-be4d-8034-bcf5-dec9360b306e" class="">如上图，这些都是表单的类型，然后就是第二个属性，也就是value 这个属性，这个属性的话他是设置这个表单类型为单行文本和密码输入框的时候这个表单的默认值的，然后就是第三个属性，也就是size这个属性，这个属性的话他是设置这个表单类型为单行文本输入框和密码输入框的时候的表单的高度的，然后就是第四个属性，也就是readonly这个属性，这个属性的话他的主要的作用就是设置这个表单的是否可以写入，然后就是第五个属性，也就是maxlenght 属性，这个属性的话他的主要的作用就是表单类型为单行文本输入框和密码输入框输入框的时候的输入的字符的最大的个数，然后就是第六个属性，也就是placeholder这个属性，这个属性的话他的作用就是设置提示文本的，主要是的作用就是提醒用户在这个该输入什么</p></li></ul><ul id="29352712-be4d-8097-bf8b-ee38fc29aefb" class="bulleted-list"><li style="list-style-type:circle">&lt;select&gt; &lt;option&gt;&lt;/option&gt; &lt;/select&gt; 那这个是什么标签呢，其实啊这个标签是下拉列表标签，其中&lt;option&gt;&lt;/option&gt;这个标签是向这个下拉列表中添加内容的</li></ul><ul id="29352712-be4d-80b9-8a3f-f21cbb9dc015" class="bulleted-list"><li style="list-style-type:circle">&lt;div&gt;&lt;div&gt; 那这个是什么标签呢，其实啊这个标签是盒子标签，主要的作用就是创建一个盒子，标签啊这个标签是一个区块元素</li></ul><ul id="29352712-be4d-80d4-8d74-c4a2df912211" class="bulleted-list"><li style="list-style-type:circle">&lt;span&gt; &lt;/span&gt; 那这个是什么标签呢，其实啊这个标签也是盒子标签，但是呢与&lt;div&gt;&lt;/div&gt;这个不同夫人就是他是行内元素</li></ul></li></ul></details></li></ul><ul id="29352712-be4d-8030-8ec2-d2a4558d1f1b" class="toggle"><li><details open=""><summary><strong>然后的话就是学习CSS语言</strong></summary><ul id="29352712-be4d-80c6-9751-ffe9f5cb5ff9" class="bulleted-list"><li style="list-style-type:disc">在学习CSS之前我们要学了解几个概念，那是什么概念呢，其实啊也就是选择器和CSS属性还有CSS属性值</li></ul><ul id="29352712-be4d-803a-881b-f5b2b6f7e35a" class="toggle"><li><details open=""><summary>那什么是选择器呢</summary><ul id="29352712-be4d-80ec-a9ce-cb6f0ea0daa8" class="bulleted-list"><li style="list-style-type:disc">其实啊选择器也很好理解，其实就是选择html元素的方法</li></ul></details></li></ul><ul id="29352712-be4d-8013-96e4-e9534d67abc5" class="toggle"><li><details open=""><summary>那什么是CSS属性呢</summary><p id="29352712-be4d-809a-b2f7-ffbc72d48935" class="">其实啊这个CSS属性这个概念也很好理解，其实啊CSS属性就是你要修改这个元素的具体的样式的名称，这就是在CSS中的属性</p></details></li></ul><ul id="29352712-be4d-806a-b6db-cc41a98dc368" class="toggle"><li><details open=""><summary>那什么是CSS属性值呢</summary><p id="29352712-be4d-8055-bcce-ddc8ebde4bb5" class="">其实啊也很简单，其实啊CSS属性值就是你要修改这个属性的具体的值，这就是在CSS中的属性值</p></details></li></ul><ul id="29352712-be4d-8008-a904-c4f1a724d010" class="bulleted-list"><li style="list-style-type:disc">了解完这几个概念之后呢我们就可以开始学习CSS了</li></ul><ul id="29352712-be4d-80b1-b097-da750699bbd2" class="bulleted-list"><li style="list-style-type:disc">首先呢我们先学习在CSS中有多少种常用的CSS的选择器吧<ul id="29352712-be4d-8048-b8b9-f877942062a7" class="bulleted-list"><li style="list-style-type:circle">首先是第一种选择器，他的名字叫做标签选择器，从名字上我们就知道他是通过标签来选择元素的，但是呢他是选择在html文件中全部的这种标签的元素，也就是说如果是通过这个选择器选择的元素的话你设置的样式将应用在这个html网页中的这种标签上，这种的选择器的格式如下：<p id="29352712-be4d-8068-931a-e2000ea5eb4e" class="">p{</p><p id="29352712-be4d-80e5-83b8-e55d9c99ea8c" class="">}</p></li></ul><ul id="29352712-be4d-80ad-af21-ee6bb90051e5" class="bulleted-list"><li style="list-style-type:circle">然后就是第二种选择器，他的名字叫做类选择器，这个选择器的话他是选择的是在html网页中所以用class属性来设置的相同类名的元素，这个选择器的格式如下：<p id="29352712-be4d-80c2-b2f5-f4d682eca657" class="">.name1{</p><p id="29352712-be4d-8077-b5cc-c7e313327b87" class="">}</p><p id="29352712-be4d-800d-af38-f70f3149ec02" class="">但是呢这里有一点要注意的就是一定要在类的前面加上点</p></li></ul><ul id="29352712-be4d-809b-8268-edab343fb19a" class="bulleted-list"><li style="list-style-type:circle">然后就是第三种选择器，他的名字叫做id选择器，这个选择器的话他是选择的是在html的标签中用id这个属性来设置的id的名字相同的元素，这个选择器的格式如下：<p id="29352712-be4d-80f8-99c8-fbca56f4646c" class="">#name1{</p><p id="29352712-be4d-8098-92a9-e3426bf6eb61" class="">}</p><p id="29352712-be4d-80d8-91ca-c907a3764ebf" class="">这里的话还要注意的一点就是一定要在id的前面加上井号</p></li></ul><ul id="29352712-be4d-809d-8878-d600a00ab13c" class="bulleted-list"><li style="list-style-type:circle">然后的话就是地四种选择器，这个选择器的名字叫做后代选择器，这个选择器的话他是选择在某个元素的里面的某个元素，这个选择器的格式如下：<p id="29352712-be4d-80ff-b462-ca8236cbb821" class="">div h1{</p><p id="29352712-be4d-80af-b0e9-c37a8931cc81" class="">}</p></li></ul><ul id="29352712-be4d-8061-92f1-d93288fe28ea" class="bulleted-list"><li style="list-style-type:circle">然后的话就是第五种选择器，这个选择器他的名字叫做组合选择器，这个选择器的话就是可以同时通过不同的选择器来选择多个元素，并且啊每个选择器之间用逗号隔开，这个选择器的格式如下：<p id="29352712-be4d-8027-a233-c1fa9728b1b5" class="">h1,h2,h3{</p><p id="29352712-be4d-8095-870f-c923b5ab34e0" class="">}</p></li></ul><ul id="29352712-be4d-80a8-b42b-e396fc069620" class="bulleted-list"><li style="list-style-type:circle">然后放入话就是第六种选择器，这个选择器的名字叫做伪类选择器，这个选择器的话他选择的是某个元素中的特定的状态，这个选择器的格式如下：<p id="29352712-be4d-802f-9243-ff5d27e8b954" class="">a:hover{</p><p id="29352712-be4d-803e-abed-ce13836ee28b" class="">}</p></li></ul></li></ul><ul id="29352712-be4d-8089-9712-dbf4b3a17d16" class="bulleted-list"><li style="list-style-type:disc">学习完了在CSS中那些常用的选择器之后呢我们就可以开始学习如何修改元素的样式了，首先呢我们还要先学习一下CSS代码的格式：<p id="29352712-be4d-8047-bb88-d325051d5a3a" class="">选择器{<div class="indented"><p id="29352712-be4d-8068-a545-defde0212208" class="">属性：属性值,</p><p id="29352712-be4d-8042-b5b1-c1db04796f29" class="">属性：属性值，</p></div></p><p id="29352712-be4d-805f-87d5-c21f3e97a58d" class="">}</p><p id="29352712-be4d-80ad-a6dd-f495643c8185" class="">如上就是我们的CSS的代码的基本的格式了，我们可以看到在CSS中每条声明都是有键值对所组成的，并且啊声明和声明之间使用逗号来隔开的</p></li></ul><ul id="29352712-be4d-80a2-96a6-f3d97046d9e7" class="bulleted-list"><li style="list-style-type:disc">之后呢学习完了CSS代码的基本格式了之后呢我们就可以开始学习在我们的html中该如何引入我们的CSS代码，其实啊在html中引入CSS代码的话有三种方法，分别是这以下几种<ul id="29352712-be4d-8093-a69c-dcf9d17f41c9" class="bulleted-list"><li style="list-style-type:circle">首先是第一种方法，第一种方法的话就是通过在html中的标签的style这个属性来引入我们的CSS代码</li></ul><ul id="29352712-be4d-80e5-98b5-e5e4bb06b8b1" class="bulleted-list"><li style="list-style-type:circle">然后就是第二种引入CSS代码的方法，也就是通过style标签来引入我们的CSS代码</li></ul><ul id="29352712-be4d-80ed-ba4e-d38c4ae933a7" class="bulleted-list"><li style="list-style-type:circle">然后就是第三种引入CSS代码的方法，也即是通过&lt;link rel = “stylesheet” href = “”/&gt;这个标签来引入外部的CSS的代码，那这个标签的这些属性是什么呢，首先是rel这个属性，这个属性的话他是指定我们要引入的资源，就不如说这个属性值stylesheet这个属性值的意思就是我们要引入的资源是CSS代码文件，然后的话就是href这个属性，这个属性的话就是指定这个css代码文件的路径的</li></ul></li></ul><ul id="29352712-be4d-8043-92d6-f543d049f5af" class="bulleted-list"><li style="list-style-type:disc">之后呢我们学会了如何引入我们的CSS代码了之后呢我们就可以开始学习在我们的CSS中那些各种各样的属性了</li></ul></details></li></ul><p id="29352712-be4d-80ff-b713-ef4fb400e741" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
