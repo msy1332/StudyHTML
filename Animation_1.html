@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			:root{
+				--videoWidth: 100%;
+			}
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				background-color: black;
+			}
+			video{
+				position: absolute;
+				width: 100%;
+			} 
+			h1{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-image: url("./img/bj.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-clip: text;
+				font-size: 400vw;
+				position: absolute;
+				color: rgba(255,255,255,1);
+				animation-name: S;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+				background-color: black;
+				overflow: hidden;
+			}
+			@keyframes S{
+				from{
+					font-size: 400vw;
+					color: rgba(255,255,255,0);
+				}
+				to{
+					font-size: 14vw;
+					color: rgba(255,255,255,1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Welcome</h1>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			:root{
+				--AnimationBoxWidth: 250px;
+				--AnimationBoxHeight: 50px;
+				--animationWidth: 100px;
+			}
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			.box1{
+				width: 600px;
+				height: 400px;
+				background-color: red;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.squre{
+				width: var(--AnimationBoxWidth);
+				height: var(--AnimationBoxHeight);
+				background-color: rgba(123, 118, 247,0.5);
+				border-radius: 25px;
+				position: relative;
+				/* overflow: hidden; */
+			}
+			.squre div{
+				position: absolute;
+				width: var(--animationWidth);
+				height: var(--AnimationBoxHeight);
+				border-radius: 25px;
+				background-color: rgba(123, 118, 247,1);
+				animation-name: Animation;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				/* transition: all 3s; */
+				animation-timing-function: ease-in-out;
+			}
+			@keyframes Animation{
+				from{
+					--animationWidth: 100px;
+					left: 0;
+					width: var(--animationWidth);
+				}
+				25%{
+					--animationWidth: 120px;
+					left: calc((var(--AnimationBoxWidth) / 2) - (var(--animationWidth) / 2));
+					width: var(--animationWidth);
+				}
+				50%{
+					--animationWidth: 100px;
+					left: calc(var(--AnimationBoxWidth) - var(--animationWidth));
+					width: var(--animationWidth);
+				}
+				75%{
+					--animationWidth: 120px;
+					left: calc((var(--AnimationBoxWidth) / 2) - (var(--animationWidth) / 2));
+					width: var(--animationWidth);
+				}
+				to{
+					--animationWidth: 100px;
+					left: 0;
+					width: var(--animationWidth);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "box1">
+			<div class = "squre">
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

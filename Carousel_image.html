@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			.Carousel_image_box{
+				width: 100vw;
+				height: 630px;
+				overflow: hidden;
+			}
+			.Carousel_image{
+				width: calc(100vw * 6);
+				height: 38vh;
+				animation-name: Carousel_image_animation;
+				animation-duration: 32s;
+				animation-delay: 7s;
+				animation-iteration-count: infinite;
+			} 
+			.Carousel_image img{
+				width: 100vw;
+				float: left;
+			}
+			@keyframes Carousel_image_animation{
+				from{
+					transform: translateX(0px);
+				}
+				20%{
+					transform: translateX(-100vw);
+				}
+				40%{
+					transform: translateX(-200vw);
+				}
+				60%{
+					transform: translateX(-300vw);
+				}
+				80%{
+					transform: translateX(-400vw);
+				}
+				to{
+					transform: translateX(-500vw);
+				}
+			}
+			.Carousel_image_title{
+				width: 400px;
+				height: 200px;
+				position: absolute;
+				top: 200px;
+				left: calc(75vw / 2);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				/* margin: 0px auto; */
+			}
+			#title1{
+				font-size: 60px;
+				color: white;
+				font-weight: bold;
+			}
+			#title2{
+				font-size: 30px;
+				letter-spacing: 1em;
+				color: white;
+				/* font-weight: bold; */
+			}
+			.Carousel_image_title a{
+				width: 100px;
+				height: 50px;
+				color: white;
+				text-align: center;
+				font-weight: bold;
+				font-size: 25px;
+				line-height: 50px;
+				padding: 5px 7px;
+				text-decoration: none;
+				background-color: rgba(255,255,255,0.1);
+				border: 1px white solid;
+				margin: 5px 0px;
+			}
+			.Carousel_image_title a:hover{
+				color: black;
+				background-color: rgba(255,255,255,1);
+			}
+			.Minecraft_image_body_box{
+				width: 100vw;
+				height: 1200px;
+				overflow: hidden;
+				background-image: url("./img/Main_0011.png");
+				background-color: rgba(0,0,0,0.6)
+				background-position: center;
+				background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "Carousel_image_box">
+			<div class = "Carousel_image">
+				<img src="./img/Main_016.png" alt="" />
+				<img src="./img/Main_013.png" alt=""/>
+				<img src="./img/Main_005.png" alt="" />
+				<img src="./img/Main_010.png" alt="" />
+				<img src="./img/Main_004.png" alt="" />
+				<img src="./img/Main_016.png" alt="" />
+			</div>
+			<div class = "Carousel_image_title">
+				<span id = "title1">我的世界</span>
+				<span id = "title2">Minecraft</span>
+				<a href="https://adl.netease.com/d/g/mc/c/gw?type=pc" target = "_blank">下载</a>
+			</div>
+		</div>
+		
+	</body>
+</html>
