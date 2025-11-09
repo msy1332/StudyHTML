@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="第 1 页" id="gbEPu5wJE3XMr6BMX7lJ">
+    <mxGraphModel dx="1426" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-16" value="浏览器" style="swimlane;whiteSpace=wrap;html=1;startSize=20;" vertex="1" parent="1">
+          <mxGeometry x="360" y="150" width="1200" height="770" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-17" value="侧边导航栏区域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#212639;" vertex="1" parent="sK5JTCSpDlgG8DMczMgC-16">
+          <mxGeometry y="20" width="300" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-18" value="内容区域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111725;" vertex="1" parent="sK5JTCSpDlgG8DMczMgC-16">
+          <mxGeometry x="300" y="20" width="900" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-25" value="侧边导航栏区域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#212639;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1150" width="300" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-26" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=47.5;endSize=14.333333333333334;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="1524.58" as="sourcePoint" />
+            <mxPoint x="890" y="1524.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-27" value="当前用户展示区域" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1150" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-28" value="抽屉式的下拉导航菜单区域" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1280" width="300" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-29" value="抽屉式的下拉导航菜单区域" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1980" width="300" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-30" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=47.5;endSize=14.333333333333334;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="2289.52" as="sourcePoint" />
+            <mxPoint x="880" y="2289.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-31" value="主菜单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1980" width="299" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-32" value="子菜单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="2060" width="299" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-33" value="主菜单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="2230" width="299" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-34" value="主菜单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="969" y="2320" width="299" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-35" value="子菜单" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="2150" width="299" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-36" value="当前用户展示区域" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="2720" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-37" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=47.5;endSize=14.333333333333334;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="2769.5" as="sourcePoint" />
+            <mxPoint x="880" y="2769.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-38" value="头像" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="969" y="2720" width="111" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sK5JTCSpDlgG8DMczMgC-41" value="用户名" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="2720" width="160" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
